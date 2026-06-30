@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1010256035151",
+    "project_id": "alexandria-move",
+    "storage_bucket": "alexandria-move.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010256035151:android:3ecd14c2899402babad93a",
+        "android_client_info": {
+          "package_name": "com.alexandriacommunitymobility.driver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnmnOtwqL-e5o1R7uj5aUjPwMjpNqysHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010256035151:android:9d3c1351c3a910f4bad93a",
+        "android_client_info": {
+          "package_name": "com.alexandriacommunitymobility.passenger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnmnOtwqL-e5o1R7uj5aUjPwMjpNqysHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,127 @@
+export const colors = {
+  primary: {
+    50: '#eef7ff',
+    100: '#d9edff',
+    200: '#bcddff',
+    300: '#8ec6ff',
+    400: '#59a8ff',
+    500: '#005bb7',
+    600: '#004fa0',
+    700: '#004289',
+    800: '#003572',
+    900: '#00285c',
+  },
+  secondary: {
+    50: '#fff7ed',
+    100: '#ffedd5',
+    200: '#fed7aa',
+    300: '#fdba74',
+    400: '#fb923c',
+    500: '#ff6b00',
+    600: '#ea6000',
+    700: '#c44f00',
+    800: '#9e3f00',
+    900: '#7a3000',
+  },
+  tertiary: {
+    50: '#e6fffe',
+    100: '#b3fcf9',
+    200: '#80f5f0',
+    300: '#4debe4',
+    400: '#26ddd5',
+    500: '#00a3ad',
+    600: '#008b94',
+    700: '#00727a',
+    800: '#005a60',
+    900: '#004247',
+  },
+  white: '#ffffff',
+  black: '#000000',
+  gray: {
+    50: '#f9fafb',
+    100: '#f3f4f6',
+    200: '#e5e7eb',
+    300: '#d1d5db',
+    400: '#9ca3af',
+    500: '#6b7280',
+    600: '#4b5563',
+    700: '#374151',
+    800: '#1f2937',
+    900: '#111827',
+  },
+  background: '#f9fafb',
+  surface: '#ffffff',
+  text: {
+    primary: '#111827',
+    secondary: '#6b7280',
+    muted: '#9ca3af',
+    inverse: '#ffffff',
+  },
+  border: '#e5e7eb',
+  success: '#00a3ad',
+  warning: '#ff6b00',
+  error: '#ef4444',
+  info: '#005bb7',
+}
+
+export const spacing = {
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  xxl: 48,
+}
+
+export const borderRadius = {
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 20,
+  pill: 100,
+}
+
+export const typography = {
+  fontFamily: 'PlusJakartaSans',
+  sizes: {
+    xs: 12,
+    sm: 14,
+    md: 16,
+    lg: 18,
+    xl: 20,
+    xxl: 24,
+    xxxl: 28,
+    display: 36,
+  },
+  weights: {
+    regular: '400' as const,
+    medium: '500' as const,
+    semibold: '600' as const,
+    bold: '700' as const,
+    extrabold: '800' as const,
+  },
+}
+
+export const shadows = {
+  sm: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.04,
+    shadowRadius: 3,
+    elevation: 1,
+  },
+  md: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+    elevation: 2,
+  },
+  lg: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.06,
+    shadowRadius: 10,
+    elevation: 4,
+  },
+}

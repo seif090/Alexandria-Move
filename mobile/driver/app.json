@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "Alexandria Driver",
+    "slug": "alexandria-driver",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "alexandria-driver",
+    "splash": {
+      "backgroundColor": "#005bb7",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alexandriacommunitymobility.driver",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Alexandria Driver needs your location for trip navigation and tracking.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Alexandria Driver needs your location in the background to keep passengers updated on your arrival.",
+        "UIBackgroundModes": ["location", "fetch"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#005bb7",
+        "foregroundImage": "./assets/adaptive-icon.png"
+      },
+      "package": "com.alexandriacommunitymobility.driver",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "POST_NOTIFICATIONS"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            { "scheme": "alexandria-driver", "host": "*", "pathPrefix": "/trip" }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Alexandria Driver needs your location for trip navigation and tracking.",
+          "locationAlwaysPermission": "Alexandria Driver needs your location in the background to keep passengers updated.",
+          "locationWhenInUsePermission": "Alexandria Driver needs your location for navigation."
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.350368355995-mq18i3756vvmc4b1n69ch6reah1920o9"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#005bb7"
+        }
+      ],
+      "expo-localization"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "alexandria-driver"
+      }
+    }
+  }
+}

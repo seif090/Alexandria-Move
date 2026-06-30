@@ -1,0 +1,35 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.nupkg
+
+## Visual Studio
+.vs/
+*.csproj.user
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Logs
+logs/
+*.log
+
+## Uploads
+Uploads/
+
+## Secret files
+appsettings.Secret.json
+
+## Environment
+.env
+.env.local
+
+## OS
+.DS_Store
+Thumbs.db

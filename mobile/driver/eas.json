@@ -1,0 +1,39 @@
+{
+  "cli": {
+    "version": ">= 3.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "http://localhost:5000",
+        "EXPO_PUBLIC_GOOGLE_MAPS_API_KEY": "YOUR_GOOGLE_MAPS_API_KEY",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+      }
+    },
+    "production": {
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.alexandriamobility.com",
+        "EXPO_PUBLIC_GOOGLE_MAPS_API_KEY": "YOUR_PRODUCTION_GOOGLE_MAPS_API_KEY",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "YOUR_PRODUCTION_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

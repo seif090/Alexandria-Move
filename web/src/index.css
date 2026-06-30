@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 40% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 10%;
+    --primary: 210 100% 36%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 30% 20%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 50%;
+    --accent: 25 100% 95%;
+    --accent-foreground: 25 80% 30%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 36%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 50% 6%;
+    --foreground: 210 20% 96%;
+    --card: 210 45% 10%;
+    --card-foreground: 210 20% 96%;
+    --popover: 210 45% 10%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 210 60% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 30% 16%;
+    --secondary-foreground: 210 20% 80%;
+    --muted: 210 30% 16%;
+    --muted-foreground: 210 15% 60%;
+    --accent: 25 60% 16%;
+    --accent-foreground: 25 60% 70%;
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 210 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200;
+  }
+  .sidebar-link-active {
+    @apply bg-primary-50 text-primary-700 border-l-[3px] border-primary-500;
+  }
+  .sidebar-link-inactive {
+    @apply text-gray-500 hover:bg-primary-50 hover:text-primary-600;
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-card;
+  }
+  .card-header {
+    @apply px-6 py-4 border-b border-gray-100;
+  }
+  .card-body {
+    @apply p-6;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-5 py-2.5 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-5 py-2.5 bg-white text-gray-700 font-medium rounded-xl border border-gray-200 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center px-5 py-2.5 bg-red-500 text-white font-semibold rounded-xl hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-4 py-2 text-gray-600 font-medium rounded-xl hover:bg-gray-100 focus:outline-none transition-all duration-200;
+  }
+  .input {
+    @apply block w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm shadow-sm placeholder-gray-400 bg-white focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition-all duration-200;
+  }
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1.5;
+  }
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  .badge-success {
+    @apply badge bg-tertiary-50 text-tertiary-700;
+  }
+  .badge-warning {
+    @apply badge bg-secondary-50 text-secondary-700;
+  }
+  .badge-error {
+    @apply badge bg-red-50 text-red-700;
+  }
+  .badge-info {
+    @apply badge bg-primary-50 text-primary-700;
+  }
+  .page-title {
+    @apply text-2xl font-bold text-gray-900;
+  }
+  .page-subtitle {
+    @apply text-sm text-gray-500 mt-1;
+  }
+  .page-header {
+    @apply flex items-center justify-between mb-6;
+  }
+  .stat-card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-card p-6;
+  }
+  .stat-value {
+    @apply text-3xl font-bold text-gray-900;
+  }
+  .stat-label {
+    @apply text-sm text-gray-500 mt-1;
+  }
+}

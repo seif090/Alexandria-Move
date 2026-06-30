@@ -1,0 +1,85 @@
+{
+  "expo": {
+    "name": "Alexandria Passenger",
+    "slug": "alexandria-passenger",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "alexandria-passenger",
+    "splash": {
+      "backgroundColor": "#005bb7",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alexandriacommunitymobility.passenger",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Alexandria needs your location to show nearby rides and track trips.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Alexandria needs your location in the background to track your trip progress.",
+        "UIBackgroundModes": ["location", "fetch"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#005bb7",
+        "foregroundImage": "./assets/adaptive-icon.png"
+      },
+      "package": "com.alexandriacommunitymobility.passenger",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "POST_NOTIFICATIONS"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            { "scheme": "alexandria-passenger", "host": "*", "pathPrefix": "/invitation" },
+            { "scheme": "alexandria-passenger", "host": "*", "pathPrefix": "/community" },
+            { "scheme": "alexandria-passenger", "host": "*", "pathPrefix": "/booking" }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Alexandria needs your location to show nearby rides and track trips.",
+          "locationAlwaysPermission": "Alexandria needs your location in the background to track your trip.",
+          "locationWhenInUsePermission": "Alexandria needs your location to show nearby rides."
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.350368355995-mq18i3756vvmc4b1n69ch6reah1920o9"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#005bb7"
+        }
+      ],
+      "expo-localization"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "alexandria-passenger"
+      }
+    }
+  }
+}
